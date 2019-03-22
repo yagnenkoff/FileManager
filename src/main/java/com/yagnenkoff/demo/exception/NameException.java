@@ -1,0 +1,7 @@
+package com.yagnenkoff.demo.exception;
+
+public class NameException extends Exception {
+    public NameException(String message){
+        super(message);
+    }
+}
