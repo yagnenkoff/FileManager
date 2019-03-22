@@ -52,6 +52,11 @@ public class FolderController {
     @ResponseBody
     @RequestMapping(value = "/open", method = RequestMethod.POST)
     public List<Folder> getFolder(Long id) {
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return folderService.findByParentId(id);
     }
 
